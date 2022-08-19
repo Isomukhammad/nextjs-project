@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.scss'
 
 export const getStaticProps = async () => {
   try {
-    const response = await fetch(`http://localhost:3000/api/socials`);
+    const response = await fetch(`${process.env.API_HOST}/socials`);
     const data = await response.json();
   
     if (!data) {
